@@ -17,7 +17,7 @@ function populateRaceDropdown(selectedYear) {
     raceSelect.innerHTML = ''; 
 
     // Fetch the list of races for the selected year
-    fetch(`http://ergast.com/api/f1/${selectedYear}.json`)
+    fetch(`https://ergast.com/api/f1/${selectedYear}.json`)
         .then((response) => {
             if (!response.ok) {
                 throw new Error('Not ok');
@@ -40,7 +40,7 @@ function populateRaceDropdown(selectedYear) {
 
 // Fetch and display race results
 function fetchRaceResults(year, round) {
-    const apiUrl = `http://ergast.com/api/f1/${year}/${round}/results.json`;
+    const apiUrl = `https://ergast.com/api/f1/${year}/${round}/results.json`;
 
     fetch(apiUrl)
         .then((response) => {
@@ -154,7 +154,7 @@ setInitialMode();
 // Set the default state of the dropdown menus based on the latest race
 async function setDefaultDropdownState() {
     try {
-        const response = await fetch('http://ergast.com/api/f1/current/last/results.json');
+        const response = await fetch('https://ergast.com/api/f1/current/last/results.json');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
