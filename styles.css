@@ -1,0 +1,76 @@
+@font-face {
+    font-family: F1FontBold;
+    src: url(./fonts/Formula1-Bold_web_0.ttf);
+}
+
+h1 {
+    font-family: F1FontBold;
+}
+
+/* Global Styles */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Container Styles */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.d-flex {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.custom-control-label {
+    cursor: pointer;
+}
+
+
+@media (min-width: 768px) {
+    
+    .container {
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    
+    .d-flex {
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+   
+    h1 {
+        margin-right: auto;
+    }
+
+   
+    .custom-control-label {
+        margin-left: 10px;
+    }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Light Mode */
+.body-light {
+    background-color: #fff; 
+    color: #000; 
+}
+
+/* Dark Mode */
+.body-dark {
+    background-color: #000; 
+    color: #fff; 
+}
