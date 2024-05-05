@@ -42,7 +42,12 @@ function populateRaceDropdown(selectedYear) {
 function fetchRaceResults(year, round) {
     const apiUrl = `https://ergast.com/api/f1/${year}/${round}/results.json`;
 
-    fetch(apiUrl)
+    fetch(apiUrl, {
+        mode: 'cors',
+        credentials: 'include',
+        method: 'POST',
+        headers: headers
+    })
         .then((response) => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
