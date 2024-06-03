@@ -187,10 +187,11 @@ populateYearDropdown();
 function toggleFanMode() {
     const fanModeSelect = document.getElementById('fanModeSelect');
     const selectedTeamColor = fanModeSelect.value;
-
-    document.body.style.backgroundColor = selectedTeamColor;
+    if(fanModeSelect.value === "def"){
+        document.body.style.backgroundColor = null;
+    }else{
+        document.body.style.backgroundColor = selectedTeamColor;}
 }
 
-const fanModeSelect = document.getElementById('fanModeSelect');
 fanModeSelect.addEventListener('change', toggleFanMode);
 
